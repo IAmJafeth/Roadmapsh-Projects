@@ -1,0 +1,3 @@
+[submodule "github-activity"]
+	path = github-activity
+	url = https://github.com/IAmJafeth/github-activity.git
