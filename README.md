@@ -34,6 +34,8 @@ If you'd like to explore my projects:
 ## Projects So Far...
 
 <!-- SUBMODULES_START -->
+- [*github-activity:*](https://github.com/IAmJafeth/github-activity.git)
+
 <!-- SUBMODULES_END -->
 
 ## Roadmaps I'm Following
