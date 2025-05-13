@@ -30,6 +30,11 @@ If you'd like to explore my projects:
    ```sh
    git submodule update --remote --merge
    ```
+   
+## Projects So Far...
+
+<!-- SUBMODULES_START -->
+<!-- SUBMODULES_END -->
 
 ## Roadmaps I'm Following
 - [Backend Developer](https://roadmap.sh/backend) 

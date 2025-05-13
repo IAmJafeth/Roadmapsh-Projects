@@ -1,0 +1,45 @@
+name: Update Submodule Info in README
+
+on:
+  push:
+    paths:
+      - '.gitmodules'
+      - 'scripts/update_submodules_readme.py'
+      - '.github/workflows/update-submodules.yml'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: 📦 Install Python dependencies
+      run: |
+        pip install --upgrade pip
+
+    - name: 📜 Run update_submodules_readme.py
+      run: |
+        python scripts/update_submodules_readme.py
+
+    - name: 📑 Commit and push changes if README was modified
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add README.md
+        if git diff --cached --quiet; then
+          echo "No changes to commit."
+        else
+          git commit -m "chore: update submodule info in README"
+          git push
+        fi
