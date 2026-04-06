@@ -35,6 +35,7 @@ If you'd like to explore my projects:
 
 <!-- SUBMODULES_START -->
 - [*github-activity:*](https://github.com/IAmJafeth/github-activity.git)
+- [*task-tracker:*](https://github.com/IAmJafeth/task-tracker.git)
 
 <!-- SUBMODULES_END -->
 
